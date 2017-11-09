@@ -1,6 +1,8 @@
 # html-telegram-bot-api [WIP]
 
+[![npm](https://img.shields.io/npm/v/html-telegram-bot-api.svg)](https://www.npmjs.com/package/html-telegram-bot-api)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![license](https://img.shields.io/github/license/Bannerets/html-telegram-bot-api.svg)](https://github.com/Bannerets/html-telegram-bot-api)
 
 Now you can write Telegram bots in HTML.
 
