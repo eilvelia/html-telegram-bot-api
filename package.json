@@ -38,6 +38,17 @@
   "directories": {
     "example": "examples"
   },
+  "keywords": [
+    "telegram",
+    "telegram-bot",
+    "telegram-bot-api",
+    "telegram bot",
+    "telegram bot api",
+    "bot",
+    "bot-api",
+    "bot api",
+    "tg"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Bannerets/html-telegram-bot-api.git"
