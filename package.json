@@ -22,5 +22,20 @@
     "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1"
+  },
+  "files": [
+    "src",
+    "bin",
+    "examples",
+    "LICENSE",
+    "README.md",
+    ".eslintrc.json"
+  ],
+  "bin": {
+    "html-telegram-bot-api": "bin/html-telegram-bot-api"
+  },
+  "directories": {
+    "example": "examples",
+    "lib": "src"
   }
 }
