@@ -1,0 +1,26 @@
+{
+  "name": "html-telegram-bot-api",
+  "description": "Write Telegram bots in HTML!",
+  "version": "0.0.1",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src",
+    "lint": "eslint .",
+    "test": "npm run lint"
+  },
+  "author": "Bannerets <save14@protonmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "commander": "^2.11.0",
+    "telegraf": "^3.15.3"
+  },
+  "devDependencies": {
+    "eslint": "^4.10.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1"
+  }
+}
