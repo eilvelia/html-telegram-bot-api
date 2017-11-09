@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node src",
     "lint": "eslint .",
-    "test": "npm run lint"
+    "test": "npm run lint",
+    "prepublishOnly": "npm test"
   },
   "author": "Bannerets <save14@protonmail.com>",
   "license": "MIT",
