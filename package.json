@@ -36,7 +36,14 @@
     "html-telegram-bot-api": "bin/html-telegram-bot-api"
   },
   "directories": {
-    "example": "examples",
-    "lib": "src"
-  }
+    "example": "examples"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bannerets/html-telegram-bot-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Bannerets/html-telegram-bot-api/issues"
+  },
+  "homepage": "https://github.com/Bannerets/html-telegram-bot-api#readme"
 }
