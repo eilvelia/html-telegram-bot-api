@@ -8,7 +8,7 @@ let filename = ''
 
 program
   .version(pkg.version)
-  .arguments('<html file>')
+  .arguments('<html_file>')
   .action(arg => (filename = arg))
   .parse(process.argv)
 
