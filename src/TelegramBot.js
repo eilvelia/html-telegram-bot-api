@@ -15,11 +15,22 @@ class TelegramBot {
    * @param {Array<Command>} commands
    */
   addCommands (commands) {
-    commands.forEach(command => this.bot.hears(command.hears, (ctx, next) => {
-      command.methods.forEach(method => {
-        let text = method.options.text
+    commands.forEach(command => this.addCommand(command))
+  }
 
-        if (command.hears instanceof RegExp) {
+  /**
+   * addCommand
+   * @method addCommand
+   * @param {Command} command
+   */
+  addCommand (command) {
+    const isRegex = command.hears instanceof RegExp
+
+    this.bot.hears(command.hears, (ctx, next) => {
+      command.methods.forEach(method => {
+        let { text } = method.options
+
+        if (isRegex) {
           ctx.match.forEach((substr, i) => {
             if (i && substr) {
               text = text.replace(new RegExp('\\$' + i, 'g'), substr)
@@ -35,7 +46,7 @@ class TelegramBot {
       })
 
       next()
-    }))
+    })
   }
 
   startPolling () {
