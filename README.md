@@ -51,6 +51,7 @@ $ html-telegram-bot-api [options] <html-file>
         <div data-tg-method="sendPhoto">
           <div data-tg-param="photo">https://www.w3.org/html/logo/downloads/HTML5_Badge_64.png</div>
         </div>
+      </div>
     </div>
   </body>
 </html>
