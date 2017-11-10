@@ -59,6 +59,6 @@ $ html-telegram-bot-api [options] <html-file>
 
 ## CLI Options
 
-- `--V`, `--version` - output the version number
+- `-V`, `--version` - output the version number
 
 - `-h`, `--help` - output usage information
