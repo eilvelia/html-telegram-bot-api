@@ -30,7 +30,7 @@ class TelegramBot {
       command.methods.forEach(method => {
         let { text } = method.options
 
-        if (isRegex) {
+        if (text && isRegex) {
           ctx.match.forEach((substr, i) => {
             if (i && substr) {
               text = text.replace(new RegExp('\\$' + i, 'g'), substr)
@@ -38,9 +38,12 @@ class TelegramBot {
           })
         }
 
-        const options = Object.assign({
-          chat_id: ctx.message.chat.id
-        }, { text })
+        const options = Object.assign(
+          {},
+          method.options,
+          { chat_id: ctx.message.chat.id },
+          text && { text }
+        )
 
         ctx.telegram.callApi(method.name, options)
       })

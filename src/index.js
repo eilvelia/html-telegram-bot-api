@@ -17,7 +17,7 @@ const html = fs.readFileSync(filename).toString()
 const parser = new Parser(html)
 
 const { token, commands } = parser.parseHTML()
-
+// commands.map(e => console.log(e))
 const bot = new TelegramBot(token)
 
 bot.addCommands(commands)

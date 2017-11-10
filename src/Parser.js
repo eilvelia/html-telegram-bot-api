@@ -81,7 +81,13 @@ class Parser {
       const methodName = methodEl.attribs['data-tg-method']
       const text = $method.html()
 
-      const options = { text }
+      const $params = $method.find('[data-tg-param]')
+
+      const options = this.parseParameters($params)
+
+      if (Object.keys(options).length === 0) {
+        options.text = text
+      }
 
       const method = new Method(methodName, options)
 
@@ -89,6 +95,29 @@ class Parser {
     })
 
     return methods
+  }
+
+  /**
+   * parseParameters
+   * @method parseParameters
+   * @param {NodeList} $params
+   * @return {Object}
+   */
+  parseParameters ($params) {
+    const { $ } = this
+
+    const params = {}
+
+    $params.each((i, paramEl) => {
+      const $param = $(paramEl)
+
+      const key = paramEl.attribs['data-tg-param']
+      const value = $param.html()
+
+      params[key] = value
+    })
+
+    return params
   }
 }
 
