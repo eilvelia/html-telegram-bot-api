@@ -1,4 +1,4 @@
-# html-telegram-bot-api [WIP]
+# html-telegram-bot-api
 
 [![npm](https://img.shields.io/npm/v/html-telegram-bot-api.svg)](https://www.npmjs.com/package/html-telegram-bot-api)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
@@ -19,7 +19,7 @@ $ [sudo] npm i -g html-telegram-bot-api
 ## Usage
 
 ```console
-$ html-telegram-bot-api [options] <html file>
+$ html-telegram-bot-api [options] <html-file>
 ```
 
 ## Example
