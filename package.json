@@ -1,7 +1,7 @@
 {
   "name": "html-telegram-bot-api",
   "description": "Write Telegram bots in HTML!",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "main": "src/index.js",
   "scripts": {
     "start": "node src",
