@@ -20,6 +20,10 @@
       <div data-tg-command="/echo (.+)" data-tg-regex>
         <div data-tg-method="sendMessage">$1</div>
       </div>
+      <div data-tg-command="/photo">
+        <div data-tg-method="sendPhoto">
+          <div data-tg-param="photo">https://www.w3.org/html/logo/downloads/HTML5_Badge_64.png</div>
+        </div>
     </div>
   </body>
 </html>

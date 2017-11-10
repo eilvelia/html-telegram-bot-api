@@ -32,6 +32,7 @@ $ html-telegram-bot-api [options] <html file>
     <title>html-telegram-bot-api</title>
   </head>
   <body data-tg-root>
+    <!-- Replace the value below with the API token you receive from Bot Father -->
     <div data-tg-token>254259451:AA5cAlGQj51K9AD37v_522HC-5lFgB</div>
     <div data-tg-commands>
       <div data-tg-command="/start">
@@ -46,6 +47,10 @@ $ html-telegram-bot-api [options] <html file>
       <div data-tg-command="/echo (.+)" data-tg-regex>
         <div data-tg-method="sendMessage">$1</div>
       </div>
+      <div data-tg-command="/photo">
+        <div data-tg-method="sendPhoto">
+          <div data-tg-param="photo">https://www.w3.org/html/logo/downloads/HTML5_Badge_64.png</div>
+        </div>
     </div>
   </body>
 </html>
