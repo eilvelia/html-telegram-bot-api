@@ -36,7 +36,7 @@ class Parser {
   /**
    * parseCommands
    * @method parseCommands
-   * @param {NodeList} $commands
+   * @param {cheerio} $commands
    * @return {Array<Command>}
    */
   parseCommands ($commands) {
@@ -53,10 +53,10 @@ class Parser {
 
       const $methods = $command.find('[data-tg-method]')
 
-      const hears = isRegex ? new RegExp(commandAttrib) : commandAttrib
+      const trigger = isRegex ? new RegExp(commandAttrib) : commandAttrib
       const methods = this.parseMethods($methods)
 
-      const command = new Command(hears, methods)
+      const command = new Command(trigger, methods)
 
       commands.push(command)
     })
@@ -67,7 +67,7 @@ class Parser {
   /**
    * parseMethods
    * @method parseMethods
-   * @param {NodeList} $methods
+   * @param {cheerio} $methods
    * @return {Array<Method>}
    */
   parseMethods ($methods) {
@@ -100,7 +100,7 @@ class Parser {
   /**
    * parseParameters
    * @method parseParameters
-   * @param {NodeList} $params
+   * @param {cheerio} $params
    * @return {Object}
    */
   parseParameters ($params) {

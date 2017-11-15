@@ -24,9 +24,9 @@ class TelegramBot {
    * @param {Command} command
    */
   addCommand (command) {
-    const isRegex = command.hears instanceof RegExp
+    const isRegex = command.trigger instanceof RegExp
 
-    this.bot.hears(command.hears, (ctx, next) => {
+    this.bot.hears(command.trigger, (ctx, next) => {
       command.methods.forEach(method => {
         let { text } = method.options
 

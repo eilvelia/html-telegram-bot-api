@@ -1,11 +1,11 @@
 class Command {
   /**
    * Command
-   * @param {string|RegExp} hears
+   * @param {string|RegExp} trigger
    * @param {Array<Method>} methods
    */
-  constructor (hears, methods) {
-    this.hears = hears
+  constructor (trigger, methods) {
+    this.trigger = trigger
     this.methods = methods
   }
 }

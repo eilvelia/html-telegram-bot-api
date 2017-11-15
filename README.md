@@ -19,7 +19,7 @@ $ [sudo] npm i -g html-telegram-bot-api
 ## Usage
 
 ```console
-$ html-telegram-bot-api [options] <html-file>
+$ html-telegram-bot-api [options] <path-to-html-file>
 ```
 
 ## Example
