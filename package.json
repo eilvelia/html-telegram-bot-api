@@ -34,6 +34,7 @@
     ".eslintrc.json"
   ],
   "bin": {
+    "html-telegram-bot": "bin/html-telegram-bot",
     "html-telegram-bot-api": "bin/html-telegram-bot-api"
   },
   "directories": {
