@@ -1,6 +1,6 @@
 class Parameter {
   /**
-   * Method
+   * Parameter
    * @param {string} key
    * @param {Object} value
    */
