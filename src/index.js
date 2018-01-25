@@ -4,21 +4,26 @@ const Parser = require('./Parser')
 const TelegramBot = require('./TelegramBot')
 const pkg = require('../package.json')
 
-let filename = ''
-
 program
   .version(pkg.version)
-  .arguments('<path-to-html-file>')
-  .action(arg => (filename = arg))
+  .arguments('<path/to/html/file>')
+  .action(start)
   .parse(process.argv)
 
-const html = fs.readFileSync(filename).toString()
+if (program.args.length === 0) {
+  console.error('filename is required')
+  process.exit(1)
+}
 
-const parser = new Parser(html)
+function start (filename) {
+  const html = fs.readFileSync(filename).toString()
 
-const { token, commands } = parser.parseHTML()
+  const parser = new Parser(html)
 
-const bot = new TelegramBot(token)
+  const { token, commands } = parser.parseHTML()
 
-bot.addCommands(commands)
-bot.startPolling()
+  const bot = new TelegramBot(token)
+
+  bot.addCommands(commands)
+  bot.startPolling()
+}
