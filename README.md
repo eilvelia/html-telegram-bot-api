@@ -64,6 +64,10 @@ $ html-telegram-bot-api [options] <path-to-html-file>
 </html>
 ```
 
+## Related
+
+* [css-telegram-bot-api](https://github.com/Bannerets/css-telegram-bot-api)
+
 ## CLI Options
 
 - `-V`, `--version` - output the version number
