@@ -1,5 +1,12 @@
 const Telegraf = require('telegraf')
 
+const replaceSubmatchs = (match, inputText) =>
+  match
+    .filter(Boolean)
+    .reduce((text, substr, i) =>
+      text.replace(new RegExp('\\$' + i, 'g'), substr),
+    inputText)
+
 class TelegramBot {
   /**
    * TelegramBot
@@ -15,7 +22,7 @@ class TelegramBot {
    * @param {Array<Command>} commands
    */
   addCommands (commands) {
-    commands.forEach(command => this.addCommand(command))
+    commands.forEach(this.addCommand.bind(this))
   }
 
   /**
@@ -28,15 +35,9 @@ class TelegramBot {
 
     this.bot.hears(command.trigger, (ctx, next) => {
       command.methods.forEach(method => {
-        let { text } = method.options
-
-        if (text && isRegex) {
-          ctx.match.forEach((substr, i) => {
-            if (i && substr) {
-              text = text.replace(new RegExp('\\$' + i, 'g'), substr)
-            }
-          })
-        }
+        const text = isRegex
+          ? replaceSubmatchs(ctx.match, method.options.text || '')
+          : method.options.text
 
         const options = Object.assign(
           {},
