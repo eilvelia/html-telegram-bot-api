@@ -1,6 +1,6 @@
 const fs = require('fs')
 const program = require('commander')
-const { parseHTML } = require('./Parser')
+const { parseHTML } = require('./parser')
 const TelegramBot = require('./TelegramBot')
 const pkg = require('../package.json')
 
